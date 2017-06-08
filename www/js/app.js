@@ -101,6 +101,4 @@ app.onPageInit('index', function(page) {
 
     }, null);
   });
-
-  page.view.router.refreshPage();
 }).trigger();
