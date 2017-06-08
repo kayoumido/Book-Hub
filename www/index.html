@@ -31,7 +31,7 @@
             <div class="navbar-inner">
               <div class="center">find my books</div>
               <div class="right">
-                  <a href="#" class="link icon-only"><i class="f7-icons">filter-fill</i></a>
+                  <a href="about.html" data-view=".view-main" class="link icon-only"><i class="f7-icons">filter-fill</i></a>
                   <a href="#" class="link icon-only"><i class="f7-icons">search_strong</i></a>
               </div>
             </div>
@@ -49,278 +49,30 @@
           <!-- Scrollable page content -->
           <div class="page-content">
             <div class="content-block">
-              <div class="row">
+              <div class="row books">
 
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
+                <script id="book_template" type="text/template7">
+                  {{#each this}}
+                    <div class="col-100 book" data-id="{{id}}">
                         <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
+                          <div class="col-25 book-cover">
+                            <img src="{{cover}}" alt="">
+                          </div>
+                          <div class="col-75 book-info">
+                            <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
+                            <div class="book-title">{{title}}</div>
+                            <div class="book-author">{{author}}</div>
+
+                            <div class="row">
+                              <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
+                              <div class="col-50 book-rate"><span class="score">{{rate}}</span> / <span class="max">10</span></div>
+                            </div>
+                          </div>
                         </div>
-                      </div>
                     </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="col-100 book" data-title="Jojo's - Diamond is unbreakable : Volume 18">
-                    <div class="row">
-                      <div class="col-25 book-cover">
-                        <img src="https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw" alt="">
-                      </div>
-                      <div class="col-75 book-info">
-                        <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
-                        <div class="book-title">Jojo's - Diamond is unbreakable : Volume 18</div>
-                        <div class="book-author">Hirohiko Araki</div>
-
-                        <div class="row">
-                          <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                          <div class="col-50 book-rate"><span class="score">10</span> / <span class="max">10</span></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
+                  {{/each}}
+                </script>
+                
               </div>
             </div>
           </div>
