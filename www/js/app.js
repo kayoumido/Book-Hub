@@ -1,5 +1,5 @@
 // Initialize app
-var books = new Framework7({
+var app = new Framework7({
     material: true
 });
 
@@ -8,7 +8,7 @@ var books = new Framework7({
 var $$ = Dom7;
 
 // Add view
-var mainView = books.addView('.view-main', {
+var mainView = app.addView('.view-main', {
     // Because we want to use dynamic navbar, we need to enable it for this view:
     dynamicNavbar: true
 });
@@ -77,7 +77,7 @@ $$(document).on('deviceready', function() {
   });
 });
 
-books.onPageInit('index', function(page) {
+app.onPageInit('index', function(page) {
   // create new db connection
   var db = window.openDatabase("books", "1.0", "Books DB", 1000000);
 
@@ -102,4 +102,5 @@ books.onPageInit('index', function(page) {
     }, null);
   });
 
+  page.view.router.refreshPage();
 }).trigger();
