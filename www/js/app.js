@@ -15,42 +15,91 @@ var mainView = books.addView('.view-main', {
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
+  // open connection to DB
+  var db = window.openDatabase("books", "1.0", "Books DB", 1000000);
+  // for dev purposes populate with data
+  db.transaction(function(tx) {
 
-    // let db = window.openDatabase("books", "1.0", "Books DB", 1000000);
+    tx.executeSql('DROP TABLE IF EXISTS books');
 
-    alert("Hello");
+    tx.executeSql(`
+        create table if not exists books (
+          id          integer  PRIMARY KEY autoincrement,
+          title       text     not null,
+          author      text     null,
+          cover       text     null,
+          favorite    integer  not null,
+          read        integer  not null,
+          rate        integer  not null,
+          isbn        text     not null,
+          comment     text     null
+        )
+    `);
+    tx.executeSql(`
+        insert into books values (
+          null,
+          'Jojos - Diamond is unbreakable : Volume 18',
+          'Hirohiko Araki',
+          'https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw',
+          0,
+          0,
+          10,
+          'blablablabla',
+          ''
+        )
+    `);
+    tx.executeSql(`
+        insert into books values (
+          null,
+          'Jojos - Diamond is unbreakable : Volume 19',
+          'Hirohiko Araki',
+          'https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw',
+          0,
+          0,
+          10,
+          'blablablabla',
+          ''
+        )
+    `);
+    tx.executeSql(`
+        insert into books values (
+          null,
+          'Jojos - Diamond is unbreakable : Volume 20',
+          'Hirohiko Araki',
+          'https://books.google.com/books/content/images/frontcover/ZHSZDQAAQBAJ?fife=w300-rw',
+          0,
+          0,
+          10,
+          'blablablabla',
+          ''
+        )
+    `);
+  });
 });
 
 books.onPageInit('index', function(page) {
-    // set click event on each book in DOM
-    $$('.book').each(function() {
-      $$(this).click(function() {
+  // create new db connection
+  var db = window.openDatabase("books", "1.0", "Books DB", 1000000);
 
-        alert($$(this).data('title'));
+  db.transaction(function(tx) {
+    tx.executeSql('select * from books', [], function(tx, data) {
+      // get template from page
+      var template = $$('#book_template').html();
+      // compile it with Template7
+      var compiledTemplate = Template7.compile(template);
+      // insert data into template
+      var html = compiledTemplate(data.rows);
+      // add it to page
+      $$('.books').html(html);
+
+      // set click event on each book in DOM
+      $$('.book').each(function() {
+        $$(this).click(function() {
+          alert($$(this).data('id'));
+        });
       });
-    });
-});
 
+    }, null);
+  });
 
-// // Now we need to run the code that will be executed only for About page.
-//
-// // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
-// books.onPageInit('index', function (page) {
-// })
-//
-// // Option 2. Using one 'pageInit' event handler for all pages:
-// $$(document).on('pageInit', function (e) {
-//     // Get page data from event data
-//     var page = e.detail.page;
-//
-//     if (page.name === 'about') {
-//         // Following code will be executed for page with data-page attribute equal to "about"
-//         books.alert('Here comes About page');
-//     }
-// })
-//
-// // Option 2. Using live 'pageInit' event handlers for each page
-// $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
-//     // Following code will be executed for page with data-page attribute equal to "about"
-//     books.alert('Here comes About page');
-// })
+}).trigger();
