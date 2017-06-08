@@ -7,16 +7,16 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-browsersync": {
+            "PACKAGE_NAME": "ch.cpnv.books"
+        },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
+            "PACKAGE_NAME": "ch.cpnv.books"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
+            "PACKAGE_NAME": "ch.cpnv.books"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-browsersync": {
             "PACKAGE_NAME": "ch.cpnv.books"
         }
     },
