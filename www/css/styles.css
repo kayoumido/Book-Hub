@@ -68,3 +68,18 @@
 .book .book-info .book-rate {
   text-align: center;
 }
+
+.searchbar {
+  background: none;
+}
+.searchbar input[type="search"]::-webkit-input-placeholder {
+  color: #191919 !important;
+}
+.searchbar input[type="search"]::selection {
+  color: #191919;
+}
+.searchbar input[type="search"] {
+  color: #191919;
+  border-bottom: 1px solid  #191919;
+  background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20fill%3D'%23191919'%20height%3D'24…4z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E);
+}
