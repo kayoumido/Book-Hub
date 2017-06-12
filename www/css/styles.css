@@ -14,6 +14,10 @@
     background: #000000;
 }
 
+.no-shadow {
+  box-shadow: none !important;
+}
+
 /*
   I know this is fucking dirty as hell but im desperate :D
   todo fix template7 bug
