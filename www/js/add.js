@@ -1,6 +1,6 @@
 app.onPageInit('add', function(page) {
   $$('.search-btn').click(function() {
-    
+
     // testing isbn codes
     // 9782253031338
     // 9780716604891
@@ -66,7 +66,7 @@ app.onPageInit('add', function(page) {
 
 function resultPopup(isbn, title, cover, author) {
   app.modal({
-    title:  `${book.title}`,
+    title:  `${title}`,
     text: `
     <div class="row book no-shadow">
       <div class="col-35 book-cover">
