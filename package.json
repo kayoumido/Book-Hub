@@ -18,15 +18,20 @@
             "cordova-plugin-console": {},
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
-            "cordova-plugin-browsersync": {}
+            "cordova-plugin-browsersync": {},
+            "phonegap-plugin-barcodescanner": {
+                "CAMERA_USAGE_DESCRIPTION": "To scan barcodes"
+            }
         }
     },
     "dependencies": {
         "cordova-android": "^6.2.3",
         "cordova-browser": "^4.1.0",
         "cordova-plugin-browsersync": "^0.1.6",
+        "cordova-plugin-compat": "^1.0.0",
         "cordova-plugin-console": "~1.0.1",
         "cordova-plugin-statusbar": "~1.0.1",
-        "cordova-plugin-whitelist": "~1.2.0"
+        "cordova-plugin-whitelist": "~1.2.0",
+        "phonegap-plugin-barcodescanner": "^6.0.6"
     }
 }
