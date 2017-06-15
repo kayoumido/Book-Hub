@@ -6,7 +6,8 @@ var app = new Framework7({
 var config = {
   devmode       : true,
   internet      : true,
-  default_cover : "img/nocover.jpg"
+  default_cover : "img/nocover.jpg",
+  api           : "https://www.googleapis.com/books/v1/volumes"
 };
 
 Template7.global = {
@@ -25,6 +26,9 @@ var mainView = app.addView('.view-main', {
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
+
+  // check if the api address is already set in localStorage
+  if (!window.localStorage.getItem('api')) window.localStorage.setItem('api', config.api);
 
   var dbh = new DBHandler();
   dbh.init();

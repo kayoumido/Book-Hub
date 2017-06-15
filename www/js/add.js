@@ -9,7 +9,7 @@ app.onPageInit('add', function(page) {
 
     // api request example https://www.googleapis.com/books/v1/volumes?q=isbn:9782253031338
     $$.ajax({
-      url       : 'https://www.googleapis.com/books/v1/volumes',
+      url       : window.localStorage.getItem('api'),
       method    : 'GET',
       dataType  : 'json',
       cache     : false,
@@ -47,7 +47,7 @@ app.onPageInit('add', function(page) {
               showFlipCameraButton  : false, // iOS and Android
               showTorchButton       : false, // iOS and Android
               torchOn               : false, // Android, launch with the torch switched on (if available)
-              prompt                : "Place codebar in rectangle.", // Android
+              prompt                : "", // Android
               resultDisplayDuration : 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
               formats               : "EAN_8,EAN_13,CODE_128,CODE_39", // default: all but PDF_417 and RSS_EXPANDED
               orientation           : "portrait", // Android only (portrait|landscape), default unset so it rotates with the device
