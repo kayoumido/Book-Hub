@@ -2,7 +2,7 @@
 
 <!-- Top Navbar-->
 <div class="pages">
-  <div data-page="settings" class="page">
+  <div data-page="detail" class="page">
 
     <div class="navbar">
       <div class="navbar-inner">
@@ -17,6 +17,27 @@
 
     <div class="page-content">
       <div class="content-block">
+        <div class="book book-detail">
+          <div class="row no-gutter">
+            <div class="col-35 book-cover">
+              <img src="img/nocover.jpg" alt="">
+            </div>
+            <div class="col-65 book-info">
+              <div class="row">
+                <div class="col-85 book-title">{{title}}</div>
+                <div class="col-15 book-favorite"><i class="f7-icons">star_fill</i></div>
+              </div>
+              <div class="row">
+                <div class="col-100 book-author">{{author}}</div>
+              </div>
+              <div class="row">
+                <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
+                <div class="col-50 book-rate"><span class="score">{{rate}}</span> / <span class="max">10</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
       </div>
     </div>

@@ -34,7 +34,7 @@
   margin-top: 10px;
 }
 
-.book {
+.books .book {
   background: #fff;
   box-shadow: 0 1px 2px rgba(0,0,0,.3);
   margin: 10px 0;
@@ -43,37 +43,37 @@
   font-size: 14px;
 }
 
-.book .book-cover {
+.books .book .book-cover {
   height: 120px;
 }
 
-.book .book-cover img {
+.books .book .book-cover img {
   height: 100%;
 }
 
-.book .book-info {
+.books .book .book-info {
   padding-left: 5px;
   padding-top: 10px;
 }
-.book .book-info .book-favorite {
+.books .book .book-info .book-favorite {
   position: absolute;
   top: 5px;
   right: 2px;
   /*color: #888 !important;*/
 }
-.book .book-info .book-favorite i {
+.books .book .book-info .book-favorite i {
   font-size: 20px;
   color: #888;
 }
-.book .book-info .book-title {
+.books .book .book-info .book-title {
   font-weight: bold;
 }
-.book .book-info .book-author {
+.books .book .book-info .book-author {
   font-size: 12px;
   font-style: italic;
 }
-.book .book-info .book-read,
-.book .book-info .book-rate {
+.books .book .book-info .book-read,
+.books .book .book-info .book-rate {
   text-align: center;
   margin-top: 15px;
 }
@@ -84,6 +84,36 @@
 
 .book .book-info .book-read.watched {
   color: #69f0ae;
+}
+
+.book-detail .book-cover {
+  width: 35%;
+}
+.book-detail .book-cover img {
+  width: auto;
+  height: 170px;
+}
+
+.book-detail .book-info {
+  width: 65%;
+  height: 170px;
+  padding-left: 5px;
+}
+.book-detail .book-info .book-title,
+.book-detail .book-info .book-favorite {
+  height: 55px;
+}
+.book-detail .book-info .book-favorite.favorite i {
+  color: yellow;
+}
+.book-detail .book-info .book-title {
+  font-size: 1.3rem;
+}
+
+.book-detail .book-info .book-author {
+  font-size: 1.15rem;
+  height: 55px;
+  font-style: italic;
 }
 
 .searchbar {
