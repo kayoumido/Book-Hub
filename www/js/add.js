@@ -17,13 +17,7 @@ app.onPageInit('add', function(page) {
         q : `isbn:${isbn}`
       },
       success   : function(data) {
-        // get book info
-        let book   = data.items[0].volumeInfo;
-        // try and get cover and author, if they dont exist, use default one
-        let cover  = book.imageLinks == null ? "img/nocover.jpg" : book.imageLinks.thumbnail;
-        let author = book.authors == null ? "Unknown" : book.authors[0];
-        // TODO just pass book into resultPopup
-        resultPopup(isbn, book.title, cover, author);
+        resultPopup(data.items[0].volumeInfo, isbn);
       },
       error     : function(xhr) {
         alert('No books were found!');
@@ -64,9 +58,13 @@ app.onPageInit('add', function(page) {
   });
 });
 
-function resultPopup(isbn, title, cover, author) {
+function resultPopup(book, isbn) {
+  // try and get cover and author, if they dont exist, use default one
+  let cover  = book.imageLinks == null ? "img/nocover.jpg" : book.imageLinks.thumbnail;
+  let author = book.authors == null ? "Unknown" : book.authors[0];
+
   app.modal({
-    title:  `${title}`,
+    title:  `${book.title}`,
     text: `
     <div class="row book no-shadow">
       <div class="col-35 book-cover">
@@ -84,7 +82,7 @@ function resultPopup(isbn, title, cover, author) {
       {
         text: 'Import',
         onClick: function() {
-            importBook(isbn, title, cover, author);
+            importBook(isbn, book.title, cover, author);
             mainView.router.loadPage('index.html');
         }
       }
