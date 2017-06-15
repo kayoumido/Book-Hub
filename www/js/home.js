@@ -19,7 +19,7 @@ app.onPageInit('index', function(page) {
       // set click event on each book in DOM
       $$('.book').each(function() {
         $$(this).click(function() {
-          alert($$(this).data('id'));
+          mainView.router.loadPage(`detail.html?id=${$$(this).data('id')}`);
         });
       });
 
