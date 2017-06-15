@@ -57,7 +57,11 @@
                     <div class="col-100 book" data-id="{{id}}">
                         <div class="row">
                           <div class="col-25 book-cover">
-                            <img src="{{cover}}" alt="">
+                            {{#if @global.internet}}
+                              <img src="{{cover}}" alt="">
+                            {{else}}
+                              <img src="{{@global.default_cover}}" alt="">
+                            {{/if}}
                           </div>
                           <div class="col-75 book-info">
                             <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
@@ -84,8 +88,9 @@
 
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/dbhandler.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/internet.js"></script>
   <script type="text/javascript" src="js/home.js"></script>
   <script type="text/javascript" src="js/add.js"></script>
 </body>

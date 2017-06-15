@@ -4,8 +4,15 @@ var app = new Framework7({
 });
 
 var config = {
-  devmode : true,
-}
+  devmode       : true,
+  internet      : true,
+  default_cover : "img/nocover.jpg"
+};
+
+Template7.global = {
+  internet      : config.internet,
+  default_cover : config.default_cover
+};
 
 // If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;

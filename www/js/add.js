@@ -22,7 +22,7 @@ app.onPageInit('add', function(page) {
         // try and get cover and author, if they dont exist, use default one
         let cover  = book.imageLinks == null ? "img/nocover.jpg" : book.imageLinks.thumbnail;
         let author = book.authors == null ? "Unknown" : book.authors[0];
-
+        // TODO just pass book into resultPopup
         resultPopup(isbn, book.title, cover, author);
       },
       error     : function(xhr) {

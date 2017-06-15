@@ -1,10 +1,12 @@
 app.onPageInit('index', function(page) {
-  
+
   var db = new DBHandler();
   var dbh = db.getDBH();
 
   dbh.transaction(function(tx) {
     tx.executeSql('select * from books', [], function(tx, data) {
+      // update configuration
+      Template7.global.internet = config.internet;
       // get template from page
       var template = $$('#book_template').html();
       // compile it with Template7
