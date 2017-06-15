@@ -75,6 +75,15 @@
 .book .book-info .book-read,
 .book .book-info .book-rate {
   text-align: center;
+  margin-top: 15px;
+}
+
+.book .book-info .book-read {
+  color: #f06292;
+}
+
+.book .book-info .book-read.watched {
+  color: #69f0ae;
 }
 
 .searchbar {
