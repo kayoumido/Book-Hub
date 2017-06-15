@@ -43,16 +43,16 @@ app.onPageInit('add', function(page) {
           },
           // Settings
           {
-              preferFrontCamera : false, // iOS and Android
-              showFlipCameraButton : false, // iOS and Android
-              showTorchButton : true, // iOS and Android
-              torchOn: false, // Android, launch with the torch switched on (if available)
-              prompt : "Place codebar in rectangle.", // Android
-              resultDisplayDuration: 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
-              formats : "EAN_8,EAN_13,CODE_128,CODE_39", // default: all but PDF_417 and RSS_EXPANDED
-              orientation : "portrait", // Android only (portrait|landscape), default unset so it rotates with the device
-              disableAnimations : true, // iOS
-              disableSuccessBeep: false // iOS
+              preferFrontCamera     : false, // iOS and Android
+              showFlipCameraButton  : false, // iOS and Android
+              showTorchButton       : false, // iOS and Android
+              torchOn               : false, // Android, launch with the torch switched on (if available)
+              prompt                : "Place codebar in rectangle.", // Android
+              resultDisplayDuration : 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
+              formats               : "EAN_8,EAN_13,CODE_128,CODE_39", // default: all but PDF_417 and RSS_EXPANDED
+              orientation           : "portrait", // Android only (portrait|landscape), default unset so it rotates with the device
+              disableAnimations     : true, // iOS
+              disableSuccessBeep    : false // iOS
           }
       );
   });
