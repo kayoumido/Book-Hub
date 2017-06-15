@@ -18,6 +18,10 @@
   box-shadow: none !important;
 }
 
+.list-block ul:before {
+  background: none;
+}
+
 /*
   I know this is fucking dirty as hell but im desperate :D
   todo fix template7 bug
