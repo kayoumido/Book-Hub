@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="lib/framework7/css/framework7.icons.css">
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="font/material-icons.css">
 </head>
 <body>
   <!-- Views -->
@@ -31,22 +32,13 @@
             <div class="navbar-inner">
               <div class="center">find my books</div>
               <div class="right">
-                  <a href="add.html" data-view=".view-main" class="link icon-only"><i class="f7-icons">add</i></a>
-                  <a href="settings.html" data-view=".view-main" class="link icon-only"><i class="f7-icons">gear</i></a>
-                  <!-- <a href="about.html" data-view=".view-main" class="link icon-only"><i class="f7-icons">filter-fill</i></a>
-                  <a href="#" class="link icon-only"><i class="f7-icons">search_strong</i></a> -->
+                  <a href="settings.html" data-view=".view-main" class="link icon-only"><i class="material-icons">settings</i></a>
               </div>
             </div>
           </div>
-
-          <!-- Toolbar. In Material theme it should be inside of the page-->
-          <!-- <div class="toolbar toolbar-bottom">
-            <div class="toolbar-inner">
-
-              <a href="#" class="link icon-only"><i class="f7-icons">book</i></a>
-              <a href="about.html" class="link icon-only"><i class="f7-icons">add</i></a>
-            </div>
-          </div> -->
+          <a href="add.html" data-view=".view-main" class="floating-button color-blue">
+            <i class="material-icons">add</i>
+          </a>
 
           <!-- Scrollable page content -->
           <div class="page-content">
@@ -65,12 +57,12 @@
                             {{/if}}
                           </div>
                           <div class="col-75 book-info">
-                            <div class="book-favorite"><i class="f7-icons">star_fill</i></div>
+                            <div class="book-favorite"><i class="material-icons">star</i></div>
                             <div class="book-title">{{title}}</div>
                             <div class="book-author">{{author}}</div>
 
                             <div class="row">
-                              <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
+                              <div class="col-50 book-read"><i class="material-icons">remove_red_eye</i></div>
                               <div class="col-50 book-rate"><span class="score">{{rate}}</span> / <span class="max">10</span></div>
                             </div>
                           </div>

@@ -12,8 +12,15 @@
           </a>
         </div>
         <div class="center">Book detail</div>
+        <div class="right">
+            <a class="link icon-only edit"><i class="material-icons">edit</i></a>
+        </div>
       </div>
     </div>
+
+    <a class="floating-button color-pink">
+      <i class="material-icons">delete</i>
+    </a>
 
     <div class="page-content">
       <div class="content-block">
@@ -29,8 +36,8 @@
                 <div class="col-66 book-info">
                   <div class="row">
                     <div class="col-100 book-author">{{author}}</div>
-                    <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                    <div class="col-50 book-favorite"><i class="f7-icons">star</i></div>
+                    <div class="col-50 book-read"><i class="material-icons">remove_red_eye</i></div>
+                    <div class="col-50 book-favorite"><i class="material-icons">star</i></div>
                     <div class="col-100 book-rate"><span class="score">{{rate}}</span> / <span class="max">10</span></div>
                   </div>
                 </div>
@@ -42,7 +49,7 @@
               </div>
             </div>
           </script>
-          
+
         </div>
 
       </div>
