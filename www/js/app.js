@@ -32,5 +32,7 @@ $$(document).on('deviceready', function() {
 
   var dbh = new DBHandler();
   dbh.init();
-  dbh.populate();
+
+  if (config.devmode)
+    dbh.populate();
 });
