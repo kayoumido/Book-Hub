@@ -1,5 +1,21 @@
 app.onPageInit('add', function(page) {
+
+  $$('input.search').on('input', function() {
+    if ($$('.search').val()) {
+      $$('.search-btn').removeAttr('disabled');
+      $$('.search-btn').addClass('active');
+    }
+    else {
+      $$('.search-btn').attr("disabled", true);
+      $$('.search-btn').removeClass('active');
+    }
+  });
+
   $$('.search-btn').click(function() {
+
+    // check if a search value was given
+    if (!$$('.search').val())
+      return;
 
     // testing isbn codes
     // 9782253031338
@@ -35,6 +51,8 @@ app.onPageInit('add', function(page) {
               // Get the result and put it on the input value
               if(!result.cancelled){
                 $$('.search').val(result.text);
+                $$('.search-btn').removeAttr('disabled');
+                $$('.search-btn').addClass('active');
               }
           },
           // Error
