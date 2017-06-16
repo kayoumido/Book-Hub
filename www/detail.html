@@ -13,12 +13,12 @@
         </div>
         <div class="center">Book detail</div>
         <div class="right">
-            <a class="link icon-only edit"><i class="material-icons">edit</i></a>
+            <a class="link icon-only edit-btn"><i class="material-icons">edit</i></a>
         </div>
       </div>
     </div>
 
-    <a class="floating-button color-pink">
+    <a class="floating-button color-pink delete-btn">
       <i class="material-icons">delete</i>
     </a>
 
@@ -27,7 +27,7 @@
         <div class="book-detail-container">
 
           <script id="book-detail-template" type="text/template7">
-            <div class="book book-detail no-shadow">
+            <div class="book book-detail no-shadow" data-id="{{id}}">
               <div class="row">
                 <div class="col-100 book-title">{{title}}</div>
               </div>

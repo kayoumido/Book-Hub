@@ -17,4 +17,14 @@ app.onPageInit('detail', function(page) {
     }, null);
   });
 
+  $$('.delete-btn').click(function() {
+    var db = new DBHandler();
+    var dbh = db.getDBH();
+
+    dbh.transaction(function(tx) {
+      tx.executeSql('delete from books where id = ?', [$$('.book-detail').data('id')], null, null);
+      mainView.router.loadPage('index.html');
+    });
+  });
+
 });
