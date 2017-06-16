@@ -4,7 +4,7 @@ app.onPageInit('detail', function(page) {
   var dbh = db.getDBH();
 
   dbh.transaction(function(tx) {
-    tx.executeSql(`select * from books where id = ${page.query.id}`, [], function(tx, data) {
+    tx.executeSql('select * from books where id = ?', [page.query.id], function(tx, data) {
       // get template from page
       var template = $$('#book-detail-template').html();
       // compile it with Template7

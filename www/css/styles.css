@@ -22,6 +22,15 @@
   background: none;
 }
 
+.content-block-title.warning {
+  text-align: center;
+  color: #ff1744;
+}
+
+.content-block-title.warning .material-icons {
+  vertical-align: text-bottom;
+}
+
 /*
   I know this is fucking dirty as hell but im desperate :D
   todo fix template7 bug
