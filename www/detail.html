@@ -9,35 +9,39 @@
         <div class="left">
           <a href="#" class="back link">
             <i class="icon icon-back"></i>
-            <span>Back</span>
           </a>
         </div>
+        <div class="center">Book detail</div>
       </div>
     </div>
 
     <div class="page-content">
       <div class="content-block">
-        <div class="book book-detail">
-          <div class="row no-gutter">
-            <div class="col-35 book-cover">
-              <img src="img/nocover.jpg" alt="">
+        <div class="book-data">
+          <script id="book-detail-template" type="text/template7">
+            <div class="book book-detail no-shadow">
+              <div class="row">
+                <div class="col-100 book-title">Gone Girl</div>
+              </div>
+              <div class="row">
+                <div class="col-33 book-cover"><img src="img/nocover.jpg" alt=""></div> <!-- image style : width 100% -->
+                <div class="col-66 book-info">
+                  <div class="row">
+                    <div class="col-100 book-author">Gillian Flynn</div>
+                    <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
+                    <div class="col-50 book-favorite"><i class="f7-icons">star</i></div>
+                    <div class="col-100 book-rate"><span class="score">{{rate}}</span> / <span class="max">10</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-100 book-comment">
+                  {{comment}}
+                </div>
+              </div>
             </div>
-            <div class="col-65 book-info">
-              <div class="row">
-                <div class="col-85 book-title">{{title}}</div>
-                <div class="col-15 book-favorite"><i class="f7-icons">star_fill</i></div>
-              </div>
-              <div class="row">
-                <div class="col-100 book-author">{{author}}</div>
-              </div>
-              <div class="row">
-                <div class="col-50 book-read"><i class="f7-icons">eye</i></div>
-                <div class="col-50 book-rate"><span class="score">{{rate}}</span> / <span class="max">10</span></div>
-              </div>
-            </div>
-          </div>
+          </script>
         </div>
-
 
       </div>
     </div>

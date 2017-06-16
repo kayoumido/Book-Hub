@@ -34,7 +34,7 @@
   margin-top: 10px;
 }
 
-.books .book {
+.book {
   background: #fff;
   box-shadow: 0 1px 2px rgba(0,0,0,.3);
   margin: 10px 0;
@@ -43,37 +43,37 @@
   font-size: 14px;
 }
 
-.books .book .book-cover {
+.book .book-cover {
   height: 120px;
 }
 
-.books .book .book-cover img {
+.book .book-cover img {
   height: 100%;
 }
 
-.books .book .book-info {
+.book .book-info {
   padding-left: 5px;
   padding-top: 10px;
 }
-.books .book .book-info .book-favorite {
+.book .book-info .book-favorite {
   position: absolute;
   top: 5px;
   right: 2px;
   /*color: #888 !important;*/
 }
-.books .book .book-info .book-favorite i {
+.book .book-info .book-favorite i {
   font-size: 20px;
   color: #888;
 }
-.books .book .book-info .book-title {
+.book .book-title {
   font-weight: bold;
 }
-.books .book .book-info .book-author {
+.book .book-info .book-author {
   font-size: 12px;
   font-style: italic;
 }
-.books .book .book-info .book-read,
-.books .book .book-info .book-rate {
+.book .book-info .book-read,
+.book .book-info .book-rate {
   text-align: center;
   margin-top: 15px;
 }
@@ -86,34 +86,46 @@
   color: #69f0ae;
 }
 
-.book-detail .book-cover {
-  width: 35%;
-}
-.book-detail .book-cover img {
-  width: auto;
-  height: 170px;
+.book-detail .book-title {
+  font-size: 1.3rem;
 }
 
 .book-detail .book-info {
-  width: 65%;
-  height: 170px;
-  padding-left: 5px;
+  margin-bottom: 25px;
+  padding: 0;
 }
-.book-detail .book-info .book-title,
-.book-detail .book-info .book-favorite {
-  height: 55px;
+
+.book-detail .book-cover {
+  height: auto;
 }
-.book-detail .book-info .book-favorite.favorite i {
-  color: yellow;
-}
-.book-detail .book-info .book-title {
-  font-size: 1.3rem;
+.book-detail .book-cover img {
+  width: 100%;
+  height: auto;
 }
 
 .book-detail .book-info .book-author {
   font-size: 1.15rem;
   height: 55px;
   font-style: italic;
+}
+
+.book-detail .book-info .book-read {
+  margin-top: 0;
+}
+
+.book-detail .book-info .book-favorite {
+  position: initial;
+  text-align: center;
+}
+
+.book-detail .book-info .book-read i,
+.book-detail .book-info .book-favorite i {
+  font-size: 2rem;
+}
+
+.book-detail .book-info .book-rate {
+  margin-top: 25px;
+  font-size: 1.2rem;
 }
 
 .searchbar {
