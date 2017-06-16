@@ -10,7 +10,7 @@ app.onPageInit('detail', function(page) {
       // compile it with Template7
       var compiledTemplate = Template7.compile(template);
       // insert data into template
-      var html = compiledTemplate(data.rows);
+      var html = compiledTemplate(data.rows[0]);
       // add it to page
       $$('.book-detail-container').html(html);
 

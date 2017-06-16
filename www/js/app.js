@@ -4,7 +4,7 @@ var app = new Framework7({
 });
 
 var config = {
-  devmode       : true,
+  devmode       : false,
   internet      : true,
   default_cover : "img/nocover.jpg",
   api           : "https://www.googleapis.com/books/v1/volumes"
