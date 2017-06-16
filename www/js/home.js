@@ -5,6 +5,11 @@ app.onPageInit('index', function(page) {
 
   dbh.transaction(function(tx) {
     tx.executeSql('select * from books', [], function(tx, data) {
+      if (data.rows.length == 0) {
+        $$('.books').html('Your library is empty. Click on the + to add some books');
+        return;
+      }
+
       // update configuration
       Template7.global.internet = config.internet;
       // get template from page
