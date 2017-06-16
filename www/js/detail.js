@@ -1,9 +1,5 @@
 app.onPageInit('detail', function(page) {
 
-  // $$('.back').click(function() {
-  //   mainView.router.loadPage('index.html');
-  // });
-
   var db = new DBHandler();
   var dbh = db.getDBH();
 
