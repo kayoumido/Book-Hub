@@ -52,7 +52,7 @@ Cordova tooling for iOS requires Apple OS X
 Error: Some of requirements check failed
 ```
 ##### See Also
-* (Android platform requirements)[https://cordova.apache.org/docs/en/7.x/guide/platforms/android/index.html#requirements-and-support]
+* [Android platform requirements](https://cordova.apache.org/docs/en/7.x/guide/platforms/android/index.html#requirements-and-support)
 
 #### Build the app
 Run the following command to build the project for __all platforms__
@@ -65,7 +65,7 @@ $ cordova build android
 ```
 You should find the apk in `C:/.../platforms/android/build/outputs/apk/android-debug.apk`.
 
-_This will build an unsigned apk. If you which build a signed apk please refer to (cordova's)[https://cordova.apache.org/docs/en/7.x/guide/overview/index.html] and (android's)[https://developer.android.com/studio/publish/app-signing.html] documentation_
+_This will build an unsigned apk. If you which build a signed apk please refer [to cordova's](https://cordova.apache.org/docs/en/7.x/guide/overview/index.html) and [android's](https://developer.android.com/studio/publish/app-signing.html) documentation_
 
 #### Test the app
 When developping it's quite long to build the apk then transfer on a device to install, thats why you can use an AVD to emulate a device on your machine. Via Android Studio you can creat a new AVD. Then you only need to run:
@@ -75,12 +75,12 @@ $ cordova run <platform>
 _If you plug a device, it will run the app on the device and not the AVD_
 
 ##### See also
-(Managing AVDs)[https://developer.android.com/studio/run/managing-avds.html]
+[Managing AVDs](https://developer.android.com/studio/run/managing-avds.html)
 
 #### Add plugins
 Here's a list of the plugins this project uses:
-* (Browser Sync)[https://github.com/phonegap/phonegap-plugin-barcodescanner] : It allows you to refresh your browser/AVD when developping. You wont need to rebuild the project so you can test your latest functionnality.
-* (Barcode Scanner)[https://github.com/nparashuram/cordova-plugin-browsersync] : This will allow us to use the devices camera so we can scan the ISBN code of books.
+* [Browser Sync](https://github.com/phonegap/phonegap-plugin-barcodescanner) : It allows you to refresh your browser/AVD when developping. You wont need to rebuild the project so you can test your latest functionnality.
+* [Barcode Scanner](https://github.com/nparashuram/cordova-plugin-browsersync) : This will allow us to use the devices camera so we can scan the ISBN code of books.
 
 The plugins beeing set in the `config.xml`, when we add a platform, cordova will automatically install the plugins for that platform. If you wish you can manually install them:
 ```
