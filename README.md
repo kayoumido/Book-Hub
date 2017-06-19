@@ -1,7 +1,7 @@
 # Find my books
 > Find my books is a [Framework7](http://www.idangero.us/framework7) based application that allows you to manage your book library. You can add books using their ISBN code, either by scanning it or manually entering it. Once your library is created, you can set books as "favorite" and rate them.
 
-## Instalation
+## Installation
 
 ### Cordova CLI
 The Cordova command-line-tool is distributed as a [npm](https://www.npmjs.com/) package.
@@ -11,7 +11,7 @@ To install `cordova`, follow these steps:
 ```
 $ npm i -g cordova
 ```
-The `-g` flag tells `npm` to install `cordova` globally. if not specified it will be installed in the `node_modules` subdirectpry of the working directory.
+The `-g` flag tells `npm` to install `cordova` globally. if not specified it will be installed in the `node_modules` subdirectory of the working directory.
 
 ### The project
 In the directory where you maintain your source code, clone the project:
@@ -36,7 +36,7 @@ The project was created for android devices, so we need to add the android platf
 $ cordova platform add android
 ```
 #### Pre-requisites
-To build and run apps, you need to install SDKs for each platform you wish to target. Alternatively, if you are using browser for development you can use browser platform which does not require any platform SDKs.
+To build and run apps, you need to install SDKs for each platform you wish to target. Alternatively, if you are using the browser for development you can use the browser platform which does not require any platform SDKs.
 
 To check if you satisfy requirements for building the platform:
 ```
@@ -65,14 +65,14 @@ $ cordova build android
 ```
 You should find the apk in `C:/.../platforms/android/build/outputs/apk/android-debug.apk`.
 
-_This will build an unsigned apk. If you which build a signed apk please refer [to cordova's](https://cordova.apache.org/docs/en/7.x/guide/overview/index.html) and [android's](https://developer.android.com/studio/publish/app-signing.html) documentation_
+_This will build an unsigned apk. If you wish to build a signed apk please refer [to cordova's](https://cordova.apache.org/docs/en/7.x/guide/overview/index.html) and [android's](https://developer.android.com/studio/publish/app-signing.html) documentation_
 
 #### Test the app
-When developping it's quite long to build the apk then transfer on a device to install, thats why you can use an AVD to emulate a device on your machine. Via Android Studio you can creat a new AVD. Then you only need to run:
+When developping it takes quite some time to build the apk and then transfer it on a device to install, thats why you can use an AVD to emulate a device on your machine. Via Android Studio you can creat a new AVD. Then you only need to run:
 ```
 $ cordova run <platform>
 ```
-_If you plug a device, it will run the app on the device and not the AVD_
+_If you plug in a device, it will run the app on the device and not the AVD_
 
 ##### See also
 [Managing AVDs](https://developer.android.com/studio/run/managing-avds.html)
