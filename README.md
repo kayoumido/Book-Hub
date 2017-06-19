@@ -1,71 +1,89 @@
 # Find my books
 > Find my books is a [Framework7](http://www.idangero.us/framework7) based application that allows you to manage your book library. You can add books using their ISBN code, either by scanning it or manually entering it. Once your library is created, you can set books as "favorite" and rate them.
 
-## Requirements
-
-* [Node.js](https://nodejs.org) : The project beeing highly developed in javascript you'll need it to install the dependencies.
-* [Cordova](http://cordova.apache.org/) : Framework7 is base of cordova so it's needed to compile the porject, intall plugins and add platorms.
-
 ## Instalation
-_All of the following commands must be executed in the project folder!_
 
-Fist of all you need to clone the project either by downloading the zip or using the git CLI.
-```
-$ git clone https://github.com/CPNV-ES/Joutes.git
-```  
-Then you need to install Cordova.
+### Cordova CLI
+The Cordova command-line-tool is distributed as a [npm](https://www.npmjs.com/) package.
+To install `cordova`, follow these steps:
+1. Download and install [Node.js](https://nodejs.org/en/). Once installed, you should be able to use `node` and `npm` in your command line.
+2. Install `cordova` module using `npm`.
 ```
 $ npm i -g cordova
 ```
-Now you need to install all of the project dependencies saved in `package.json`.
+The `-g` flag tells `npm` to install `cordova` globally. if not specified it will be installed in the `node_modules` subdirectpry of the working directory.
+
+### The project
+In the directory where you maintain your source code, clone the project:
+```
+$ git clone https://github.com/CPNV-ES/MOB1-Books-Framework7.git
+```
+_You can just download the zip file._
+
+All the following commands need to be run within the project's directory:
+```
+$ cd MOB1-Books-Framework7
+```
+
+Now you need to install the project dependencies:
 ```
 $ npm i
 ```
 
-### Platforms
-Find my books is guarranteed to work in the Browser and Android (>= Android 4.1 Jelly Bean API 16).
-As for IOS it kinda works. It wasn't fully tested so I can't guarrantee it fully works.
+#### Add platforms
+The project was created for android devices, so we need to add the android platform.
 ```
-$ cordova platform add <browser/android/ios>
+$ cordova platform add android
 ```
+#### Pre-requisites
+To build and run apps, you need to install SDKs for each platform you wish to target. Alternatively, if you are using browser for development you can use browser platform which does not require any platform SDKs.
 
-#### Browser
-No specific requirements except Google Chrome. It doesn't work any other browsers.
+To check if you satisfy requirements for building the platform:
+```
+$ cordova requirements
+Java JDK: installed .
+Android SDK: installed
+Android target: installed android-19,android-21,android-22,android-23,Google Inc.:Google APIs:19,Google Inc.:Google APIs (x86 System Image):19,Google Inc.:Google APIs:23
+Gradle: installed
 
-#### Android
-To be able to run it on android, there are some prerequisites.
+Requirements check results for ios:
+Apple OS X: not installed
+Cordova tooling for iOS requires Apple OS X
+Error: Some of requirements check failed
+```
+##### See Also
+* (Android platform requirements)[https://cordova.apache.org/docs/en/7.x/guide/platforms/android/index.html#requirements-and-support]
 
-* First, you must have the [Java Development Kit (JDK) 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) or later.  
-* Second you need to have an android SDK. The simplest way to install them is to install [Android Studio](https://developer.android.com/studio/index.html). Once installed, launch it and open the SDK manager and intall the wanted SDK. For more details on the SDK manager click [here](https://developer.android.com/studio/intro/update.html).  
-If you want to work with a virtual android device, you can add a new AVD via android studio. For more detail on AVD click [here](https://developer.android.com/studio/run/managing-avds.html).
+#### Build the app
+Run the following command to build the project for __all platforms__
+```
+$ cordova build
+```
+You can specify the platform for which you want to build:
+```
+$ cordova build android
+```
+You should find the apk in `C:/.../platforms/android/build/outputs/apk/android-debug.apk`.
 
+_This will build an unsigned apk. If you which build a signed apk please refer to (cordova's)[https://cordova.apache.org/docs/en/7.x/guide/overview/index.html] and (android's)[https://developer.android.com/studio/publish/app-signing.html] documentation_
 
-#### IOS
-For IOS development please follow the [official documentation](http://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html).
+#### Test the app
+When developping it's quite long to build the apk then transfer on a device to install, thats why you can use an AVD to emulate a device on your machine. Via Android Studio you can creat a new AVD. Then you only need to run:
+```
+$ cordova run <platform>
+```
+_If you plug a device, it will run the app on the device and not the AVD_
 
-## Plugins
-Plugins are an integral part of the cordova ecosystem. They provide an interface for Cordova and native components to communicate with each other and bindings to standard device APIs. This enables you to invoke native code from JavaScript.
-Here is a list of all the plugins used it this project.
+##### See also
+(Managing AVDs)[https://developer.android.com/studio/run/managing-avds.html]
 
+#### Add plugins
+Here's a list of the plugins this project uses:
 * (Browser Sync)[https://github.com/phonegap/phonegap-plugin-barcodescanner] : It allows you to refresh your browser/AVD when developping. You wont need to rebuild the project so you can test your latest functionnality.
 * (Barcode Scanner)[https://github.com/nparashuram/cordova-plugin-browsersync] : This will allow us to use the devices camera so we can scan the ISBN code of books.
 
-### Instalation
-Normaly when adding the platforms, cordova will see the plugins in the `config.xml` file and automaticlly install them. But if they aren't installed, you can manually install them.
+The plugins beeing set in the `config.xml`, when we add a platform, cordova will automatically install the plugins for that platform. If you wish you can manually install them:
 ```
 $ cordova plugin add phonegap-plugin-barcodescanner
 $ cordova plugin add cordova-plugin-browsersync
 ```
-
-## Usage
-### Development
-When developping you can just use cordovas run command to quickly test your changes
-```
-$ cordova run <browser/android>
-```
-if you are using Browser Sync
-```
-$ cordova run <browser/android> -- --live-reload
-```
-
-### Build an APK
