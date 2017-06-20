@@ -1,5 +1,6 @@
 app.onPageInit('index', function(page) {
-
+  hasInternet();
+  
   var db = new DBHandler();
   var dbh = db.getDBH();
 
@@ -30,4 +31,4 @@ app.onPageInit('index', function(page) {
 
     }, null);
   });
-}).trigger();
+});

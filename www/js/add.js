@@ -1,4 +1,5 @@
 app.onPageInit('add', function(page) {
+  hasInternet();
 
   $$('input.search').on('input', function() {
     if ($$('.search').val()) {

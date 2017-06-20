@@ -1,4 +1,6 @@
 app.onPageInit('detail', function(page) {
+  hasInternet();
+
   var book;
   var db  = new DBHandler();
   var dbh = db.getDBH();
