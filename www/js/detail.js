@@ -1,10 +1,12 @@
 app.onPageInit('detail', function(page) {
-
+  var book;
   var db  = new DBHandler();
   var dbh = db.getDBH();
 
   dbh.transaction(function(tx) {
     tx.executeSql('select * from books where id = ?', [page.query.id], function(tx, data) {
+      book = data.rows[0];
+
       // get template from page
       var template = $$('#book-detail-template').html();
       // compile it with Template7
@@ -51,7 +53,15 @@ app.onPageInit('detail', function(page) {
     dbh.transaction(function(tx) {
       tx.executeSql('update books set read = ? where id = ?', [state, $$('.book-detail').data('id')], null, null);
     });
+  });
 
+  $$('.back').on('click', function(e) {
+    e.preventDefault();
+    mainView.router.loadPage('index.html');
+  });
+
+  $$('.edit-btn').click(function() {
+    console.log(book);
   });
 
 });
