@@ -2,106 +2,106 @@
 
 <!-- Top Navbar-->
 <div class="pages">
-  <div data-page="detail" class="page">
+    <div data-page="detail" class="page">
 
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="left">
-          <a href="#" class="back link">
-            <i class="icon icon-back"></i>
-          </a>
-        </div>
-        <div class="center">Book detail</div>
-        <div class="right">
-            <a class="link icon-only save-btn"></a>
-        </div>
-      </div>
-    </div>
-
-    <a class="floating-button color-pink delete-btn">
-      <i class="material-icons">delete</i>
-    </a>
-
-    <div class="page-content">
-      <div class="content-block">
-        <div class="book-detail-container">
-
-          <script id="book-detail-template" type="text/template7">
-            <div class="book book-detail no-shadow" data-id="{{id}}">
-              <div class="row">
-                <div class="col-100 book-title">{{title}}</div>
-              </div>
-              <div class="row">
-                <div class="col-33 book-cover"><img src="{{cover}}" alt=""></div> <!-- image style : width 100% -->
-                <div class="col-66 book-info">
-                  <div class="row">
-                    <div class="col-100 book-author">{{author}}</div>
-                    {{#if read}}
-                      <div class="col-50 book-read read"><i class="material-icons">remove_red_eye</i></div>
-                    {{else}}
-                      <div class="col-50 book-read"><i class="material-icons">remove_red_eye</i></div>
-                    {{/if}}
-                    {{#if favorite}}
-                      <div class="col-50 book-favorite favorite"><i class="material-icons">star</i></div>
-                    {{else}}
-                      <div class="col-50 book-favorite"><i class="material-icons">star</i></div>
-                    {{/if}}
-
-                    <div class="col-100 book-rate">
-
-                      <div class="list-block">
-                        <ul>
-                          <li>
-                            <div class="item-content">
-                              <div class="item-inner">
-                                <div class="item-input">
-                                    <select class="book-rate-select">
-                                      <option value="{{rate}}">{{rate}}</option>
-                                      <option value="1">1</option>
-                                      <option value="2">2</option>
-                                      <option value="3">3</option>
-                                      <option value="4">4</option>
-                                      <option value="5">5</option>
-                                      <option value="6">6</option>
-                                      <option value="7">7</option>
-                                      <option value="8">8</option>
-                                      <option value="9">9</option>
-                                      <option value="10">10</option>
-                                    </select>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-
-                    </div>
-                  </div>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="back link">
+                        <i class="icon icon-back"></i>
+                    </a>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-100 book-comment">
-                  <div class="list-block inputs-list">
-                    <ul>
-                      <li>
-                        <div class="item-content">
-                          <div class="item-inner not-empty-state">
-                            <div class="item-title floating-label">Comment</div>
-                            <div class="item-input">
-                              <textarea>{{comment}}</textarea>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+                <div class="center">Book detail</div>
+                <div class="right">
+                        <a class="link icon-only save-btn"></a>
                 </div>
-              </div>
             </div>
-          </script>
-
         </div>
-      </div>
+
+        <a class="floating-button delete-btn">
+            <i class="material-icons">delete</i>
+        </a>
+
+        <div class="page-content">
+            <div class="content-block">
+                <div class="book-detail-container">
+
+                    <script id="book-detail-template" type="text/template7">
+                        <div class="book book-detail no-shadow" data-id="{{id}}">
+                            <div class="row">
+                                <div class="col-100 book-title">{{title}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-33 book-cover"><img src="{{cover}}" alt=""></div> <!-- image style : width 100% -->
+                                <div class="col-66 book-info">
+                                    <div class="row">
+                                        <div class="col-100 book-author">{{author}}</div>
+                                        {{#if read}}
+                                            <div class="col-50 book-read read"><i class="material-icons">remove_red_eye</i></div>
+                                        {{else}}
+                                            <div class="col-50 book-read"><i class="material-icons">remove_red_eye</i></div>
+                                        {{/if}}
+                                        {{#if favorite}}
+                                            <div class="col-50 book-favorite favorite"><i class="material-icons">star</i></div>
+                                        {{else}}
+                                            <div class="col-50 book-favorite"><i class="material-icons">star</i></div>
+                                        {{/if}}
+
+                                        <div class="col-100 book-rate">
+
+                                            <div class="list-block">
+                                                <ul>
+                                                    <li>
+                                                        <div class="item-content">
+                                                            <div class="item-inner">
+                                                                <div class="item-input">
+                                                                        <select class="book-rate-select">
+                                                                            <option value="{{rate}}">{{rate}}</option>
+                                                                            <option value="1">1</option>
+                                                                            <option value="2">2</option>
+                                                                            <option value="3">3</option>
+                                                                            <option value="4">4</option>
+                                                                            <option value="5">5</option>
+                                                                            <option value="6">6</option>
+                                                                            <option value="7">7</option>
+                                                                            <option value="8">8</option>
+                                                                            <option value="9">9</option>
+                                                                            <option value="10">10</option>
+                                                                        </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-100 book-comment">
+                                    <div class="list-block inputs-list">
+                                        <ul>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-inner not-empty-state">
+                                                        <div class="item-title floating-label">Comment</div>
+                                                        <div class="item-input">
+                                                            <textarea>{{comment}}</textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </script>
+
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

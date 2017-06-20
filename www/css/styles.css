@@ -1,164 +1,177 @@
 /*
-   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
-   statusbar plugin is added, it also adds default setting to make the content white via:
+     statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+     statusbar plugin is added, it also adds default setting to make the content white via:
 
-       <preference name="StatusBarStyle" value="lightcontent"/>
+             <preference name="StatusBarStyle" value="lightcontent"/>
 
-   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
-   in the config.xml file and will be added by the CLI when you build locally.
+     Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+     in the config.xml file and will be added by the CLI when you build locally.
 
-   See https://github.com/apache/cordova-plugin-statusbar
+     See https://github.com/apache/cordova-plugin-statusbar
 */
 
+.theme-custom-red .navbar {
+        background-color: #FFC107;
+}
+
+.floating-button.add {
+    background-color: #00C853;
+}
+.floating-button.delete-btn {
+    background-color: #D50000;
+}
+.book {
+    background: #fff;
+}
+.book-read.read {
+    color: #00C853;
+}
+.book-favorite.favorite {
+    color: #ffeb3b;
+}
+.book-favorite,
+.book-read    {
+    color: #888;
+}
+.content-block-title.warning {
+    color: #D50000;
+}
 .statusbar-overlay {
     background: #000000;
 }
 
 .no-shadow {
-  box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 .list-block ul:before {
-  background: none;
+    background: none;
 }
 
 .content-block-title.warning {
-  text-align: center;
-  color: #ff1744;
+    text-align: center;
 }
 
 .content-block-title.warning .material-icons {
-  vertical-align: text-bottom;
+    vertical-align: text-bottom;
 }
 
 /*
-  I know this is fucking dirty as hell but im desperate :D
-  todo fix template7 bug
+    I know this is fucking dirty as hell but im desperate :D
+    todo fix template7 bug
  */
 .books > .book:nth-last-of-type(-n+2) {
-  display: none;
+    display: none;
 }
 
 .content-block {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .book {
-  background: #fff;
-  box-shadow: 0 1px 2px rgba(0,0,0,.3);
-  margin: 10px 0;
-  position: relative;
-  min-height: 120px;
-  font-size: 14px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+    margin: 10px 0;
+    position: relative;
+    min-height: 120px;
+    font-size: 14px;
 }
 
 .book .book-cover {
-  height: 120px;
+    height: 120px;
 }
 
 .book .book-cover img {
-  height: 100%;
+    height: 100%;
 }
 
 .book .book-info {
-  padding-left: 5px;
-  padding-top: 10px;
+    padding-left: 5px;
+    padding-top: 10px;
 }
 .book .book-info .book-favorite {
-  position: absolute;
-  top: 5px;
-  right: 2px;
-  color: #888;
+    position: absolute;
+    top: 5px;
+    right: 2px;
 }
-.book .book-info .book-favorite.favorite {
-  color: #ffeb3b;
-}
+
 .book .book-info .book-favorite i {
-  font-size: 20px;
+    font-size: 20px;
 }
 .book .book-title {
-  font-weight: bold;
+    font-weight: bold;
 }
 .book .book-info .book-author {
-  font-size: 12px;
-  font-style: italic;
+    font-size: 12px;
+    font-style: italic;
 }
 .book .book-info .book-read,
 .book .book-info .book-rate {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.book .book-info .book-read {
-  color: #f06292;
-}
-
-.book .book-info .book-read.read {
-  color: #69f0ae;
+    text-align: center;
+    margin-top: 15px;
 }
 
 .book-detail .book-title {
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 }
 
 .book-detail .book-info {
-  margin-bottom: 25px;
-  padding: 0;
+    margin-bottom: 25px;
+    padding: 0;
 }
 
 .book-detail .book-cover {
-  height: auto;
+    height: auto;
 }
 .book-detail .book-cover img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .book-detail .book-info .book-author {
-  font-size: 1.15rem;
-  height: 55px;
-  font-style: italic;
+    font-size: 1.15rem;
+    height: 55px;
+    font-style: italic;
 }
 
 .book-detail .book-info .book-read {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .book-detail .book-info .book-favorite {
-  position: initial;
-  text-align: center;
+    position: initial;
+    text-align: center;
 }
 
 .book-detail .book-info .book-read i,
 .book-detail .book-info .book-favorite i {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 .book-detail .book-info .book-rate {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 .book-detail .list-block {
-  margin-top: 0;
-  margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .book-detail .book-rate .item-inner {
-  padding: 0;
+    padding: 0;
 }
 .book-detail .book-rate .item-input {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .searchbar {
-  background: none;
+    background: none;
 }
 .searchbar input[type="search"]::-webkit-input-placeholder {
-  color: #191919 !important;
+    color: #191919 !important;
 }
 .searchbar input[type="search"]::selection {
-  color: #191919;
+    color: #191919;
 }
 .searchbar input[type="search"] {
-  color: #191919;
-  border-bottom: 1px solid  #191919;
+    color: #191919;
+    border-bottom: 1px solid    #191919;
 }

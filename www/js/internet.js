@@ -3,10 +3,10 @@
  * @return {Boolean} [description]
  */
 function hasInternet() {
-  if (navigator.connection.type == Connection.NONE) {
-    config.internet = false;
-  }
-  else {
-    config.internet = true;
-  }
+    if (navigator.connection.type == Connection.NONE) {
+        config.internet = false;
+    }
+    else {
+        config.internet = true;
+    }
 }

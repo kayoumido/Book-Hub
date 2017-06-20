@@ -4,15 +4,15 @@ var app = new Framework7({
 });
 
 var config = {
-  devmode       : false,
-  internet      : true,
-  default_cover : "img/nocover.jpg",
-  api           : "https://www.googleapis.com/books/v1/volumes"
+    devmode       : false,
+    internet      : true,
+    default_cover : "img/nocover.jpg",
+    api           : "https://www.googleapis.com/books/v1/volumes"
 };
 
 Template7.global = {
-  internet      : config.internet,
-  default_cover : config.default_cover
+    internet      : config.internet,
+    default_cover : config.default_cover
 };
 
 // If we need to use custom DOM library, let's save it to $$ variable:
@@ -27,17 +27,17 @@ var mainView = app.addView('.view-main', {
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
 
-  // check if the api address is already set in localStorage
-  if (!window.localStorage.getItem('api')) window.localStorage.setItem('api', config.api);
+    // check if the api address is already set in localStorage
+    if (!window.localStorage.getItem('api')) window.localStorage.setItem('api', config.api);
 
-  // check if we have an internet connection
-  hasInternet();
+    // check if we have an internet connection
+    hasInternet();
 
-  var dbh = new DBHandler();
-  dbh.init();
+    var dbh = new DBHandler();
+    dbh.init();
 
-  if (config.devmode)
-    dbh.populate();
+    if (config.devmode)
+        dbh.populate();
 
-  mainView.router.loadPage('index.html');
+    mainView.router.loadPage('index.html');
 });
