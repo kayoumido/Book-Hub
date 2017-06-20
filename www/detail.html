@@ -13,7 +13,7 @@
         </div>
         <div class="center">Book detail</div>
         <div class="right">
-            <a class="link icon-only edit-btn"><i class="material-icons">edit</i></a>
+            <a class="link icon-only save-btn"></a>
         </div>
       </div>
     </div>
@@ -48,13 +48,14 @@
                     {{/if}}
 
                     <div class="col-100 book-rate">
+
                       <div class="list-block">
                         <ul>
                           <li>
                             <div class="item-content">
                               <div class="item-inner">
                                 <div class="item-input">
-                                    <select>
+                                    <select class="book-rate-select">
                                       <option value="{{rate}}">{{rate}}</option>
                                       <option value="1">1</option>
                                       <option value="2">2</option>
@@ -73,17 +74,32 @@
                           </li>
                         </ul>
                       </div>
+
                     </div>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-100 book-comment">
-                  {{comment}}
+                  <div class="list-block inputs-list">
+                    <ul>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner not-empty-state">
+                            <div class="item-title floating-label">Comment</div>
+                            <div class="item-input">
+                              <textarea>{{comment}}</textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </script>
+
         </div>
       </div>
     </div>

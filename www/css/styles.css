@@ -138,8 +138,9 @@
   font-size: 1.2rem;
 }
 
-.book-detail .book-rate .list-block {
+.book-detail .list-block {
   margin-top: 0;
+  margin-bottom: 0;
 }
 .book-detail .book-rate .item-inner {
   padding: 0;
