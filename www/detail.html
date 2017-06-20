@@ -36,9 +36,44 @@
                 <div class="col-66 book-info">
                   <div class="row">
                     <div class="col-100 book-author">{{author}}</div>
-                    <div class="col-50 book-read"><i class="material-icons">remove_red_eye</i></div>
-                    <div class="col-50 book-favorite"><i class="material-icons">star</i></div>
-                    <div class="col-100 book-rate"><span class="score">{{rate}}</span> / <span class="max">10</span></div>
+                    {{#if read}}
+                      <div class="col-50 book-read read"><i class="material-icons">remove_red_eye</i></div>
+                    {{else}}
+                      <div class="col-50 book-read"><i class="material-icons">remove_red_eye</i></div>
+                    {{/if}}
+                    {{#if favorite}}
+                      <div class="col-50 book-favorite favorite"><i class="material-icons">star</i></div>
+                    {{else}}
+                      <div class="col-50 book-favorite"><i class="material-icons">star</i></div>
+                    {{/if}}
+
+                    <div class="col-100 book-rate">
+                      <div class="list-block">
+                        <ul>
+                          <li>
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-input">
+                                    <select>
+                                      <option value="{{rate}}">{{rate}}</option>
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                      <option value="10">10</option>
+                                    </select>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -49,9 +84,7 @@
               </div>
             </div>
           </script>
-
         </div>
-
       </div>
     </div>
   </div>

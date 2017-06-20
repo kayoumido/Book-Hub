@@ -135,8 +135,17 @@
 }
 
 .book-detail .book-info .book-rate {
-  margin-top: 25px;
   font-size: 1.2rem;
+}
+
+.book-detail .book-rate .list-block {
+  margin-top: 0;
+}
+.book-detail .book-rate .item-inner {
+  padding: 0;
+}
+.book-detail .book-rate .item-input {
+  margin-bottom: 0;
 }
 
 .searchbar {
