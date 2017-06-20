@@ -56,12 +56,20 @@
                             {{/if}}
                           </div>
                           <div class="col-75 book-info">
-                            <div class="book-favorite"><i class="material-icons">star</i></div>
+                            {{#if favorite}}
+                              <div class="book-favorite favorite"><i class="material-icons">star</i></div>
+                            {{else}}
+                              <div class="book-favorite"><i class="material-icons">star</i></div>
+                            {{/if}}
                             <div class="book-title">{{title}}</div>
                             <div class="book-author">{{author}}</div>
 
                             <div class="row">
-                              <div class="col-50 book-read"><i class="material-icons">remove_red_eye</i></div>
+                              {{#if read}}
+                                <div class="col-50 book-read read"><i class="material-icons">remove_red_eye</i></div>
+                              {{else}}
+                                <div class="col-50 book-read"><i class="material-icons">remove_red_eye</i></div>
+                              {{/if}}
                               <div class="col-50 book-rate"><span class="score">{{rate}}</span> / <span class="max">10</span></div>
                             </div>
                           </div>
