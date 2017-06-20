@@ -68,11 +68,13 @@
   position: absolute;
   top: 5px;
   right: 2px;
-  /*color: #888 !important;*/
+  color: #888;
+}
+.book .book-info .book-favorite.favorite {
+  color: #ffeb3b;
 }
 .book .book-info .book-favorite i {
   font-size: 20px;
-  color: #888;
 }
 .book .book-title {
   font-weight: bold;
@@ -91,7 +93,7 @@
   color: #f06292;
 }
 
-.book .book-info .book-read.watched {
+.book .book-info .book-read.read {
   color: #69f0ae;
 }
 
