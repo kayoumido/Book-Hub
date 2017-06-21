@@ -2,27 +2,27 @@ app.onPageInit('add', function(page) {
     hasInternet();
 
     $$('input.search').on('input', function() {
-        if ($$('.search').val()) {
-            $$('.search-btn').removeAttr('disabled');
-            $$('.search-btn').addClass('active');
+        if ($$('input.search').val()) {
+            $$('.search.button').removeAttr('disabled');
+            $$('.search.button').addClass('active');
         }
         else {
-            $$('.search-btn').attr("disabled", true);
-            $$('.search-btn').removeClass('active');
+            $$('.search.button').attr("disabled", true);
+            $$('.search.button').removeClass('active');
         }
     });
 
-    $$('.search-btn').click(function() {
+    $$('.search.button').click(function() {
 
         // check if a search value was given
-        if (!$$('.search').val())
+        if (!$$('input.search').val())
             return;
 
         // testing isbn codes
         // 9782253031338
         // 9780716604891
         // 9782940501410
-        let isbn = $$('.search').val();
+        let isbn = $$('input.search').val();
 
         // api request example https://www.googleapis.com/books/v1/volumes?q=isbn:9782253031338
         $$.ajax({
@@ -45,7 +45,7 @@ app.onPageInit('add', function(page) {
         });
     });
 
-    $$('.scan-btn').click(function() {
+    $$('.scan').click(function() {
         cordova.plugins.barcodeScanner.scan(
             // Success
                     function (result) {

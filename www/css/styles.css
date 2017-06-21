@@ -17,7 +17,7 @@
 .floating-button.add {
     background-color: #FF8F00;
 }
-.floating-button.delete-btn {
+.floating-button.delete {
     background-color: #D50000;
 }
 .book {
@@ -39,7 +39,7 @@
 .statusbar-overlay {
     background: #000000;
 }
-.search-btn.button.button-fill {
+.search.button.button-fill {
     background-color: #FF8F00;
 }
 .list-block .focus-state .label,

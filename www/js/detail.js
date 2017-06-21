@@ -21,7 +21,7 @@ app.onPageInit('detail', function(page) {
         }, null);
     });
 
-    $$('.delete-btn').click(function() {
+    $$('.delete').click(function() {
         var db    = new DBHandler();
         var dbh = db.getDBH();
 
@@ -82,9 +82,7 @@ app.onPageInit('detail', function(page) {
         }
     });
 
-    $$('.save-btn').on('click', 'i', function() {
-        console.log($$('.book-rate-select').val());
-        console.log($$('.book-comment textarea').val());
+    $$('.save').on('click', 'i', function() {
         // open connection to db to update book
         var db  = new DBHandler();
         var dbh = db.getDBH();
