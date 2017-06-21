@@ -15,7 +15,7 @@
 }
 
 .floating-button.add {
-    background-color: #00C853;
+    background-color: #FF8F00;
 }
 .floating-button.delete-btn {
     background-color: #D50000;
@@ -38,6 +38,17 @@
 }
 .statusbar-overlay {
     background: #000000;
+}
+.search-btn.button.button-fill {
+    background-color: #FF8F00;
+}
+.list-block .focus-state .label,
+.list-block .focus-state .floating-label {
+    color: #FF8F00;
+}
+.item-input-field.focus-state:after,
+.item-input-field.not-empty-state:after {
+    background-color: #FF8F00 !important;
 }
 
 .no-shadow {
