@@ -18,10 +18,6 @@ app.onPageInit('add', function(page) {
         if (!$$('input.search').val())
             return;
 
-        // testing isbn codes
-        // 9782253031338
-        // 9780716604891
-        // 9782940501410
         let isbn = $$('input.search').val();
 
         // api request example https://www.googleapis.com/books/v1/volumes?q=isbn:9782253031338
@@ -42,7 +38,7 @@ app.onPageInit('add', function(page) {
                     text  : "Check if the ISBN code is valid or that you have an internet connection",
                     buttons: [
                         {
-                            text: "ok"
+                            text: "Ok"
                         }
                     ]
                 });
