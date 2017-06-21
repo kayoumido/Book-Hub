@@ -37,7 +37,15 @@ app.onPageInit('add', function(page) {
                 resultPopup(data.items[0].volumeInfo, isbn);
             },
             error  : function(xhr) {
-                alert('No books were found!');
+                app.modal({
+                    title : "No books were found",
+                    text  : "Check if the ISBN code is valid or that you have an internet connection",
+                    buttons: [
+                        {
+                            text: "ok"
+                        }
+                    ]
+                });
                 console.error(`readyState:            ${xhr.readyState}`);
                 console.error(`status:                    ${xhr.status}`);
                 console.error(`responseText:        ${xhr.responseText}`);
@@ -48,32 +56,35 @@ app.onPageInit('add', function(page) {
     $$('.scan').click(function() {
         cordova.plugins.barcodeScanner.scan(
             // Success
-                    function (result) {
-                            // Get the result and put it on the input value
-                            if(!result.cancelled){
-                                $$('.search').val(result.text);
-                                $$('.search-btn').removeAttr('disabled');
-                                $$('.search-btn').addClass('active');
-                            }
-                    },
-                    // Error
-                    function (error) {
-                            alert("Invalid barcode");
-                    },
-                    // Settings
-                    {
-                            preferFrontCamera       : false, // iOS and Android
-                            showFlipCameraButton    : false, // iOS and Android
-                            showTorchButton         : false, // iOS and Android
-                            torchOn                 : false, // Android, launch with the torch switched on (if available)
-                            prompt                  : "", // Android
-                            resultDisplayDuration   : 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
-                            formats                 : "EAN_8,EAN_13,CODE_128,CODE_39", // default: all but PDF_417 and RSS_EXPANDED
-                            orientation             : "portrait", // Android only (portrait|landscape), default unset so it rotates with the device
-                            disableAnimations       : true, // iOS
-                            disableSuccessBeep      : false // iOS
-                    }
-            );
+            function (result) {
+                // Get the result and put it on the input value
+                if(!result.cancelled) {
+                    $$('.search').val(result.text);
+                    $$('.button.search').removeAttr('disabled');
+                    $$('.button.search').addClass('active');
+                    $$('.item-inner').addClass('focus-state');
+                    $$('.item-input').addClass('focus-state');
+                    $$('.search').addClass('focus-state');
+                }
+            },
+            // Error
+            function (error) {
+                alert("Invalid barcode");
+            },
+            // Settings
+            {
+                preferFrontCamera       : false, // iOS and Android
+                showFlipCameraButton    : false, // iOS and Android
+                showTorchButton         : false, // iOS and Android
+                torchOn                 : false, // Android, launch with the torch switched on (if available)
+                prompt                  : "", // Android
+                resultDisplayDuration   : 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
+                formats                 : "EAN_8,EAN_13,CODE_128,CODE_39", // default: all but PDF_417 and RSS_EXPANDED
+                orientation             : "portrait", // Android only (portrait|landscape), default unset so it rotates with the device
+                disableAnimations       : true, // iOS
+                disableSuccessBeep      : false // iOS
+            }
+        );
     });
 });
 
